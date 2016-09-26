@@ -2,8 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = router;
+module.exports = function(app){
+	
+	app.get('/', function(req, res, next) {
+		req.session.name = "mine";
+		console.log('http',req.session)
+		res.render('index', { title: 'Express' });
+	});
+
+	app.get('/test', function(req, res, next){
+		req.session.testing = "mine";
+		console.log('http',req.session);
+		res.render('index', { title: 'test page'});
+	});
+
+};

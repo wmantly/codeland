@@ -7,5 +7,16 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+		<script>
+		  var socket = io('http://localhost:3000');
+
+		  function send(name, data){}
+		  socket.on('news', function (data) {
+		    console.log('data', data);
+		  });
+		</script>
   </body>
 </html>
