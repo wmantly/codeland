@@ -1,0 +1,51 @@
+.code-ace {
+	height: 100%;
+}
+
+.code-ace form{
+	height: 50%;
+}
+
+.code-ace .btn-default:hover {
+	background-color: rgba(249, 156, 0, 0.50);
+	/*color: white;*/
+}
+
+.code-ace div.codeland-buttons{
+	margin-bottom: .5em;
+}
+
+.code-ace #code-editor{
+	height: calc(100% - 43px);
+}
+
+.code-ace .code-res{
+	height: 50%;
+}
+
+.code-ace .code-res pre{
+	height: 100%;
+	margin: 0;
+}
+
+.code-ace .ask-a-question .dropdown-menu {
+    padding: 10px;
+    width: 400px;
+    /*height: 300px;*/
+}
+
+.code-ace .ask-a-question .dropdown-menu [type='text']{
+	border: 1px solid #f98700;
+	width: 100%;
+	margin-bottom: 10px; 
+}
+
+.code-ace .ask-a-question .dropdown-menu textarea{
+	border: 1px solid #f98700;
+	width: 100%;
+	height: 200px;
+}
+
+.code-ace .action-button .hidden {
+	display: none;
+}

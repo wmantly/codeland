@@ -1,0 +1,1 @@
+spa.includeScript('/services/codeland-crunner/js/index.js');

@@ -1,0 +1,26 @@
+<ul>
+{{ #teams }}
+	<li>
+		<h3 data-team-slug="{{ slug }}">{{ name }}</h3>
+		<ul>
+		{{ #members }}
+			<li class="{{ #onLine }}list-group-item-success{{ /onLine }}">
+				{{ username }}
+			</li>
+		{{ /members }}
+		</ul>
+	</li>
+{{ /teams }}
+	<li>
+		<h3>Other</h3>
+		<ul>
+		{{ #users }}
+			{{ #username }}
+				<li class="{{ #onLine }}list-group-item-success{{ /onLine }}">
+					{{ username }}
+				</li>
+			{{ /username }}
+		{{ /users }}
+		</ul>
+	</li>
+<ul>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>codeland.us</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.5, maximum-scale=1.0, user-scalable=no" />
+	<!-- FAVICON -->
+<!-- 	<link href="/static/landing/img/logo_only.png" rel="shortcut icon">
+	<link rel="icon" type="image/x-icon" href="/static/landing/img/logo_only.png"> -->
+
+</head>
+<body>
+
+	<div id="spa-loader-holder">
+		<center style="margin-top: 3em;">
+			<h1 style="color: grey; border-top: .1em solid grey; border-bottom: .1em solid grey; display: inline;">
+				codeland.us
+			</h1><br /><br /><br />
+			Loading...
+		</center>
+	</div>
+	<div id="spa-shell" class="container-fluid" style="display:none;">
+	</div>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.css"> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/theme/solarized.min.css"> -->
+<!-- 	<link href="//www.fuelcdn.com/fuelux/3.15.8/css/fuelux.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Playfair+Display:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/theme.css?v=VERSION">
+	<link rel="stylesheet" type="text/css" href="/css/global.css?v=VERSION">
+
+	<script src="https://use.fontawesome.com/9fbcbdbc41.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+	<!-- ACE EXTENSIONS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-modelist.js"></script>
+	<!-- NEXT 3 NOT USED CURRENTLY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-settings_menu.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-themelist.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-keybinding_menu.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.7/bluebird.min.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/codemirror.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/mode/python/python.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/addon/search/searchcursor.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.18.2/keymap/sublime.js"></script> -->
+	<!-- Extensions -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+
+	<script type="text/javascript">
+		var spa = {
+			"defaults": {
+				"shell": "gotty"
+			},
+		};
+		(function() {
+			var appScript = document.createElement('script');
+			appScript.type = 'text/javascript';
+			var spaScript = document.createElement('script');
+			spaScript.type = 'text/javascript';
+
+			if(location.hash.replace('#', '') === 'dev'){
+				spa.devMode = true;
+				window.JQSPA_BASE_PATH = '/libs/jqspa';
+				spaScript.src = '/libs/jqspa/src/spa.js';
+				appScript.src = '/js/app.js';
+			}else{
+				spaScript.src = '/js/spa.min.js?v=VERSION';
+				appScript.src = '/js/app.min.js?v=VERSION';
+			}
+			$("body").append(spaScript).append(appScript);
+
+		})();
+	</script>
+</body>
+</html>

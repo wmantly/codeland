@@ -1,0 +1,21 @@
+<div>
+	<h2>{{name}}</h2>
+	<ul id="spa-chat-room">
+	{{ #messages }}
+		{{ >messageTemplate }}
+	{{ /messages }}
+	</ul>
+</div>
+<div>
+	<form id="spa-chat-room-input" class="form-inline">
+		<div class="form-group">
+			<input type="text"
+				id="spa-chat-send-message"
+				data-team-name="{{ slug }}"
+			>
+			<button type="submit" class="btn btn-default">
+				SEND
+			</button>
+		</div>
+	</form>
+</div>

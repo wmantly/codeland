@@ -1,0 +1,8 @@
+.code-mirror .btn-default:hover {
+	background-color: #151515;
+	color: white;
+}
+
+.code-mirror div.codeland-buttons{
+	margin-bottom: .5em;
+}

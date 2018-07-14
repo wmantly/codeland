@@ -1,0 +1,34 @@
+.codeland {
+	overflow: hidden;
+}
+
+.codeland #codeland-left {
+	overflow-y: auto;
+	height: calc(100% - 56px);
+	padding-right: 0;
+}
+
+.codeland #codeland-middle {
+	height: calc(100% - 56px );
+	overflow: hidden;
+	padding-right: 0;
+}
+
+.codeland #codeland-right {
+	overflow-y: auto;
+	height: calc(100% - 56px );
+}
+
+.codeland main.github-readme {
+	height: calc(100% - 38px);
+	overflow-y: auto;
+	padding-bottom: 5em;
+	padding-right: .5em;
+}
+
+.codeland .quiz {
+	bottom: 50px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}

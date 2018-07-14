@@ -1,0 +1,10 @@
+<div class="form-group">
+	<label for="{{id}}">{{{question}}}</label>
+	<select id="{{id}}" class="form-control selectpicker" name="{{name}}" title="Nothing Selected">
+		{{#choices}}
+			<option data-content="{{md_parse}}" value="{{.}}">
+				{{.}}
+			</option>
+		{{/choices}}
+	</select>
+</div>

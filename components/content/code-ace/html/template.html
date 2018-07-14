@@ -1,0 +1,50 @@
+<form id="code-run" method="POST">
+	<div class="codeland-buttons">
+		<button id="run" type="button" class="btn btn-default action-button" title="Execute this code.">
+			<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+			Run
+		</button>
+		<button id="save" type="button" class="btn btn-default action-button" title="Save this code for later.">
+			<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+			Save
+		</button>
+		<button id="test" type="button" class="btn btn-default action-button" title="Test this code.">
+			<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+			Test
+		</button>
+
+		<button id="quiz" type="button" class="hidden btn btn-default action-button" title="Take the quiz.">
+			<span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+			Quiz
+		</button>
+
+		<button id="reset" type="button" class="btn btn-default action-button" title="Replace code with exercise default.">
+			<i class="fa fa-eraser" aria-hidden="true"></i>
+			Reset
+		</button>
+
+		<div class="dropdown ask-a-question" style="display: inline-block;">
+			<button class="btn btn-default dropdown-toggle" type="button" id="ask-a-question" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+				Question
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="ask-a-question" data-forum-model="exercise" data-forum-slug={{exercise-slug}}>
+				<li>
+					<input type="text" placeholder="Title" />
+				</li>
+				<li>
+					<textarea placeholder="Ask your question here!"></textarea>
+				</li>
+				<li>
+					<button id="question" type="button" class="btn btn-primary pull-right">Ask Question</button>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div id="code-editor">
+	</div>
+</form>
+<div data-component-name="code-res">
+</div>
